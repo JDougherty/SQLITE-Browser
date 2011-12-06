@@ -7,10 +7,11 @@ complicated SQL commands.
 
 This repository is a fork of the original SQLite Database Browser
 (http://sqlitebrowser.sourceforge.net/) which is no longer being
-maintained. The authors of the original code, Mauricio Piacentini from
-Tabuleiro Producoes, disclaim copyright to this source code ("It may be used
+maintained. The authors of the original code, Mauricio Piacentini and Jens
+Miltner, disclaim copyright to this source code ("It may be used
 as the basis for other programs, public domain, open source or commercial. Do
 whatever you want with it.")
+
 
 
 This project and all additive code to the original code is licensed under the
