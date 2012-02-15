@@ -608,8 +608,19 @@ void DBBrowserDB::logSQL(QString statement, int msgtype)
  uint loglimit = 300;
  if ((statement.length() > loglimit)&&(msgtype==kLogMsg_App))
  {
-     statement.truncate(32);
-     statement.append("... <string too wide to log, probably contains binary data> ...");
+     bool binary;
+     for (int i = 0; i < statement.size(); i++)
+     {
+         if (statement.at(i) < 32)
+         {
+             binary = TRUE;
+         }
+     }
+     if (binary)
+     {
+         statement.truncate(32);
+         statement.append("... <string too wide to log, probably contains binary data> ...");
+     }
  } 
  logWin->log(statement, msgtype);
     }
